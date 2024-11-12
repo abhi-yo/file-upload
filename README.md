@@ -1,6 +1,15 @@
-# Cloudinary Upload API Endpoint
+# Interactive File Upload Component with Cloudinary
+A React component for uploading images and videos to Cloudinary with progress tracking, file preview, and validation.
 
-Simple Next.js API route for uploading images and videos to Cloudinary.
+## Features
+
+* 📁 Supports image and video uploads
+* ⚖️ File size validation (max 10MB)
+* 📊 Upload progress indicator
+* 🖼️ File preview functionality
+* ❌ Error handling and validation messages
+* 🎯 Drag and drop support
+* ✨ Upload status animations
 
 ## Setup
 
