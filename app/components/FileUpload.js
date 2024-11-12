@@ -11,7 +11,6 @@ export default function FileUpload() {
   const [error, setError] = useState('');
   const [fileType, setFileType] = useState('');
 
-  // Reference to file input
   const fileInputRef = useRef(null);
 
   const validateFile = (file) => {
@@ -25,7 +24,7 @@ export default function FileUpload() {
       'image/gif',
       'image/webp',
       'video/mp4',
-      'video/quicktime', // For .mov files
+      'video/quicktime',
       'video/webm'
     ];
     if (!allowedTypes.includes(file.type)) {
@@ -38,7 +37,6 @@ export default function FileUpload() {
     const file = e.target.files[0];
     setError('');
 
-    // Validate file
     const validationError = validateFile(file);
     if (validationError) {
       setError(validationError);
@@ -51,7 +49,6 @@ export default function FileUpload() {
     setSelectedFile(file);
     setFileType(file.type);
 
-    // Create preview URL
     const fileReader = new FileReader();
     fileReader.onload = () => {
       setPreviewUrl(fileReader.result);
@@ -100,7 +97,6 @@ export default function FileUpload() {
       setUploadProgress(100);
       clearInterval(progressInterval);
 
-      // Clear selection after successful upload
       setSelectedFile(null);
       setPreviewUrl('');
       setFileType('');
